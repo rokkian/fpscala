@@ -1,0 +1,23 @@
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(sbtMapExec 11 __4c3a36b0-a21b-435d-aa29-29627527f3db, None, None)
+[debug] > Exec(bspBuildTargetJVMRunEnvironment file:/home/mrocco/workspace/fpscala/#fpscala/Compile file:/home/mrocco/workspace/fpscala/#fpscala-build file:/home/mrocco/workspace/fpscala/#fpscala/Test, Some(__4c3a36b0-a21b-435d-aa29-29627527f3db), Some(CommandSource(network-3)))
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing buildTarget/jvmRunEnvironment"})
+[debug] Evaluating tasks: Compile / bspBuildTargetJVMRunEnvironment
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"12","parents":[]},"eventTime":1690031819636,"message":"Compiling fpscala","dataKind":"compile-task","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"12","parents":[]},"eventTime":1690031819636,"message":"Compiling fpscala","dataKind":"compile-task","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"12","parents":[]},"eventTime":1690031819642,"message":"Compiled fpscala","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Compile"},"errors":0,"warnings":0,"time":6}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"12","parents":[]},"eventTime":1690031819642,"message":"Compiled fpscala","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Compile"},"errors":0,"warnings":0,"time":6}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"13","parents":[]},"eventTime":1690031819649,"message":"Compiling fpscala-test","dataKind":"compile-task","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Test"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"13","parents":[]},"eventTime":1690031819649,"message":"Compiling fpscala-test","dataKind":"compile-task","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Test"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"13","parents":[]},"eventTime":1690031819655,"message":"Compiled fpscala-test","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Test"},"errors":0,"warnings":0,"time":6}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"13","parents":[]},"eventTime":1690031819655,"message":"Compiled fpscala-test","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/mrocco/workspace/fpscala/#fpscala/Test"},"errors":0,"warnings":0,"time":6}})
+[success] Total time: 0 s, completed Jul 22, 2023, 3:16:59 PM
+[debug] > Exec(sbtCompleteExec 11, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(sbtReportResult 11, Some(11), Some(CommandSource(network-3)))
+[debug] unmatched Processing event for requestId Some(11): None
+[debug] unmatched json response for requestId Some(11): {"status":"Done","channelName":"network-3","execId":"11","commandQueue":["shell"],"exitCode":0}
+[debug] > Exec(shell, None, None)
+[debug] Forcing garbage collection...
