@@ -113,7 +113,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.fc38.x86_64",
+                "home": "/usr/lib/jvm/java-11-openjdk-amd64",
                 "options": [
                     "-Duser.dir=/home/mrocco/workspace/fpscala"
                 ]

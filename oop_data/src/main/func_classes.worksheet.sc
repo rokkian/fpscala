@@ -5,9 +5,7 @@
 // the function type A => B is an abbreviation for the class scala
 
 //package scala
-trait Function1[A, B]:
-    def apply(x: A): B
-
+trait Function1[A, B]: {def apply(x: A): B}
 // => le funzioni sono oggetti con metodi apply 
 
 // anonymous functions
