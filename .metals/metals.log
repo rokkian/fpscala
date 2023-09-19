@@ -928,3 +928,434 @@ INFO: Current version of schema "PUBLIC": 4
 Sep 05, 2023 5:00:17 PM org.flywaydb.core.internal.command.DbMigrate logSummary
 INFO: Schema "PUBLIC" is up to date. No migration necessary.
 2023.09.05 17:00:20 WARN  sql closed: select build_target_uri from dependency_source where text_document_uri = ?;[0m
+2023.09.15 14:55:34 INFO  Started: Metals version 1.0.1 in folders '/home/mrocco/workspace/fpscala' for client Visual Studio Code 1.82.2.[0m
+Sep 15, 2023 2:55:35 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+Sep 15, 2023 2:55:35 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Sep 15, 2023 2:55:35 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+2023.09.15 14:55:36 WARN  resetting database: /home/mrocco/workspace/fpscala/.metals/metals.h2.db[0m
+2023.09.15 14:55:36 ERROR org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:h2:file:/home/mrocco/workspace/fpscala/.metals/metals;AUTO_SERVER=TRUE) for user 'sa': IO Exception: "/home/mrocco/workspace/fpscala/.metals/metals.mv.db" [90028-214]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 90028
+Error Code : 90028
+Message    : IO Exception: "/home/mrocco/workspace/fpscala/.metals/metals.mv.db" [90028-214]
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:84)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "/home/mrocco/workspace/fpscala/.metals/metals.mv.db" [90028-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:171)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:84)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.mvstore.MVStoreException: Reading from file sun.nio.ch.FileChannelImpl@3fb2fc62 failed at 1 (length 1), read 1, remaining 8191 [2.1.214/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:470)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:98)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:837)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:84)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.EOFException
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:458)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:98)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:837)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:84)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+[0m
+2023.09.15 14:55:36 WARN  resetting database: /home/mrocco/workspace/fpscala/.metals/metals.h2.db[0m
+2023.09.15 14:55:36 ERROR unable to setup persistent H2 database with AUTO_SERVER=false, falling back to in-memory database. This means you may be redundantly asked to execute 'Import build', even if it's not needed. Also, code navigation will not work for existing files in the .metals/readonly/ directory. To fix this problem, make sure you only have one running Metals server in the directory '/home/mrocco/workspace/fpscala'.
+org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database (jdbc:h2:file:/home/mrocco/workspace/fpscala/.metals/metals;AUTO_SERVER=TRUE) for user 'sa': IO Exception: "/home/mrocco/workspace/fpscala/.metals/metals.mv.db" [90028-214]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 90028
+Error Code : 90028
+Message    : IO Exception: "/home/mrocco/workspace/fpscala/.metals/metals.mv.db" [90028-214]
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryNoAutoServer(Tables.scala:101)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:95)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "/home/mrocco/workspace/fpscala/.metals/metals.mv.db" [90028-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:171)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryNoAutoServer(Tables.scala:101)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:95)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+Caused by: org.h2.mvstore.MVStoreException: Reading from file sun.nio.ch.FileChannelImpl@58cc8b50 failed at 1 (length 1), read 1, remaining 8191 [2.1.214/1]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:470)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:98)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:837)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryNoAutoServer(Tables.scala:101)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:95)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.EOFException
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:458)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:98)
+	at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:837)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:463)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
+	at org.flywaydb.core.Flyway.clean(Flyway.java:234)
+	at scala.meta.internal.metals.Tables.migrateOrRestart(Tables.scala:159)
+	at scala.meta.internal.metals.Tables.tryUrl(Tables.scala:147)
+	at scala.meta.internal.metals.Tables.persistentConnection(Tables.scala:141)
+	at scala.meta.internal.metals.Tables.tryNoAutoServer(Tables.scala:101)
+	at scala.meta.internal.metals.Tables.tryAutoServer(Tables.scala:95)
+	at scala.meta.internal.metals.Tables.connect(Tables.scala:48)
+	at scala.meta.internal.metals.Tables.connection(Tables.scala:77)
+	at scala.meta.internal.metals.Tables.$anonfun$fingerprints$1(Tables.scala:39)
+	at scala.meta.internal.metals.Fingerprints.load(Fingerprints.scala:52)
+	at scala.meta.internal.metals.MetalsLspService.loadFingerPrints(MetalsLspService.scala:843)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3(WorkspaceLspService.scala:993)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$3$adapted(WorkspaceLspService.scala:993)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$initialize$2(WorkspaceLspService.scala:993)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+[0m
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:mem:metals (H2 2.1)
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.033s)
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+Sep 15, 2023 2:55:36 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.044s)
+2023.09.15 14:55:36 INFO  time: initialize in 1.65s[0m
+2023.09.15 14:55:40 INFO  Attempting to connect to the build server...[0m
+2023.09.15 14:55:40 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/mrocco/.bloop/bloop.json[0m
+2023.09.15 14:55:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mrocco/workspace/fpscala/.metals/bsp.trace.json or /home/mrocco/.cache/metals/bsp.trace.json[0m
+2023.09.15 14:55:45 INFO  Attempting to connect to the build server...[0m
+2023.09.15 14:55:45 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/mrocco/.bloop/bloop.json[0m
+2023.09.15 14:55:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mrocco/workspace/fpscala/project/.metals/bsp.trace.json or /home/mrocco/.cache/metals/bsp.trace.json[0m
+2023.09.15 14:55:45 INFO  time: Connected to build server in 5.11s[0m
+2023.09.15 14:55:45 INFO  Connected to Build server: Bloop v1.5.8[0m
+2023.09.15 14:55:46 INFO  no build target found for /home/mrocco/workspace/fpscala/coder/src/main/scala/w3objects_funcs.worksheet.sc. Using presentation compiler with project's scala-library version: 3.3.0[0m
+2023.09.15 14:55:47 INFO  running '/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals18344215019457818093/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.09.15 14:55:47 INFO  time: Imported build in 0.29s[0m
+2023.09.15 14:55:49 INFO  no build target found for /home/mrocco/workspace/fpscala/coder/src/main/scala/w3objects_funcs.worksheet.sc. Using presentation compiler with project's scala-library version: 3.3.0[0m
+2023.09.15 14:55:49 INFO  [info] welcome to sbt 1.9.4 (Ubuntu Java 11.0.20.1)[0m
+2023.09.15 14:55:50 INFO  [info] loading settings for project fpscala-build-build from metals.sbt ...[0m
+2023.09.15 14:55:51 INFO  [info] loading project definition from /home/mrocco/workspace/fpscala/project/project[0m
+2023.09.15 14:55:52 INFO  time: code lens generation in 5.14s[0m
+2023.09.15 14:55:52 INFO  time: code lens generation in 5.12s[0m
+2023.09.15 14:55:52 INFO  time: code lens generation in 5.16s[0m
+2023.09.15 14:55:53 INFO  [info] loading settings for project fpscala-build from metals.sbt ...[0m
+2023.09.15 14:55:53 INFO  [info] loading project definition from /home/mrocco/workspace/fpscala/project[0m
+2023.09.15 14:55:54 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2023.09.15 14:55:56 INFO  [success] Generated .bloop/fpscala-build.json[0m
+2023.09.15 14:55:56 INFO  [success] Total time: 3 s, completed Sep 15, 2023, 2:55:56 PM[0m
+2023.09.15 14:55:56 INFO  [info] set current project to fpscala (in build file:/home/mrocco/workspace/fpscala/)[0m
+2023.09.15 14:55:57 INFO  [success] Generated .bloop/fpscala-test.json[0m
+2023.09.15 14:55:57 INFO  [success] Generated .bloop/fpscala.json[0m
+2023.09.15 14:55:57 INFO  [success] Total time: 0 s, completed Sep 15, 2023, 2:55:57 PM[0m
+2023.09.15 14:55:57 INFO  time: ran 'sbt bloopInstall' in 10s[0m
+2023.09.15 14:55:57 INFO  Disconnecting from Bloop session...[0m
+2023.09.15 14:55:57 INFO  Shut down connection with build server.[0m
+2023.09.15 14:55:57 INFO  Shut down connection with build server.[0m
+2023.09.15 14:55:57 INFO  Attempting to connect to the build server...[0m
+2023.09.15 14:55:57 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/mrocco/.bloop/bloop.json[0m
+2023.09.15 14:55:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mrocco/workspace/fpscala/.metals/bsp.trace.json or /home/mrocco/.cache/metals/bsp.trace.json[0m
+2023.09.15 14:55:57 INFO  Attempting to connect to the build server...[0m
+2023.09.15 14:55:57 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/mrocco/.bloop/bloop.json[0m
+2023.09.15 14:55:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mrocco/workspace/fpscala/project/.metals/bsp.trace.json or /home/mrocco/.cache/metals/bsp.trace.json[0m
+2023.09.15 14:55:57 INFO  time: Connected to build server in 0.19s[0m
+2023.09.15 14:55:57 INFO  Connected to Build server: Bloop v1.5.8[0m
+2023.09.15 14:55:58 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2023.09.15 14:55:58 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2023.09.15 14:55:58 INFO  time: indexed workspace in 10s[0m
+2023.09.15 14:55:58 WARN  no build target for: /home/mrocco/workspace/fpscala/coder/src/main/scala/w3objects_funcs.worksheet.sc[0m
+2023.09.15 14:55:59 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2023.09.15 14:55:59 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2023.09.15 14:55:59 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2023.09.15 14:55:59 INFO  time: indexed workspace in 1.92s[0m
+2023.09.15 14:55:59 WARN  no build target for: /home/mrocco/workspace/fpscala/coder/src/main/scala/w3objects_funcs.worksheet.sc[0m
+2023.09.15 14:56:03 INFO  time: evaluated worksheet 'w3objects_funcs.worksheet.sc' in 4.79s[0m
+2023.09.15 14:56:03 WARN  no build target for: /home/mrocco/workspace/fpscala/coder/src/main/scala/w3objects_funcs.worksheet.sc[0m
+2023.09.15 14:56:03 INFO  time: code lens generation in 3.05s[0m
+2023.09.15 14:56:03 INFO  time: code lens generation in 4.04s[0m
+2023.09.15 14:56:03 INFO  time: evaluated worksheet 'w3objects_funcs.worksheet.sc' in 1.02s[0m
+2023.09.15 14:56:04 INFO  time: evaluated worksheet 'w3objects_funcs.worksheet.sc' in 0.61s[0m
+2023.09.15 14:56:06 INFO  no build target found for /home/mrocco/workspace/fpscala/coder/src/main/scala/w3objects_funcs.worksheet.sc. Using presentation compiler with project's scala-library version: 2.12.18[0m
+2023.09.15 14:56:53 WARN  no build target for: /home/mrocco/workspace/fpscala/funsets_bk/src/main/scala/funsets/FunSets.scala[0m
+Sep 15, 2023 2:56:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15
+Sep 15, 2023 2:56:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_14-56-53-481
+Sep 15, 2023 2:56:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_14-56-53-670
+Sep 15, 2023 2:57:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_14-57-57-384
+Sep 15, 2023 3:00:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-00-57-365
+Sep 15, 2023 3:01:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-01-02-304
+Sep 15, 2023 3:01:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-01-07-153
+Sep 15, 2023 3:01:08 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-01-08-625
+Sep 15, 2023 3:01:12 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-01-12-661
+2023.09.15 15:01:14 WARN  no build target for: /home/mrocco/workspace/fpscala/funsets_bk/src/main/scala/funsets/FunSets.scala[0m
+Sep 15, 2023 3:01:14 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-01-14-577
+Sep 15, 2023 3:01:14 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-01-14-934
+Sep 15, 2023 3:02:07 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/mrocco/workspace/fpscala/.metals/.reports/metals-full/2023-09-15/r_compiler-error_15-02-07-271
+2023.09.15 15:02:56 WARN  no build target for: /home/mrocco/workspace/fpscala/coder/build.sbt[0m
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@6dd7418e[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 1436]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:825)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1355)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@6dd7418e[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 1436]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:825)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1355)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
