@@ -8,11 +8,11 @@ abstract class Nat:
   def - (that: Nat): Nat
 end Nat
 
-object Zero extends Nat:
-    def isZero: Boolean = true
-    def predecessor: Nat = Unit
-    def successor: Nat = 
+// object Zero extends Nat:
+//     def isZero: Boolean = true
+//     def predecessor: Nat = Unit
+//     def successor: Nat = Unit
 
-class Succ(n: Nat) extends Nat:
+// class Succ(n: Nat) extends Nat:
     
 

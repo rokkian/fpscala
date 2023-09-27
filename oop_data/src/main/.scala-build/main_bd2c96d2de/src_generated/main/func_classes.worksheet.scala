@@ -1,3 +1,11 @@
+
+
+
+
+final class func_classes$u002Eworksheet$_ {
+def args = func_classes$u002Eworksheet_sc.args$
+def scriptPath = """func_classes.worksheet.sc"""
+/*<script>*/
 // functions as objects
 // Scala numeric types and the boolean type can be implemented like normal classes
 // what about functions?
@@ -49,3 +57,28 @@ class Car extends BMW{
 var obj = new Car()
 obj.mercSpecs()
 obj.Display()
+
+/*</script>*/ /*<generated>*/
+/*</generated>*/
+}
+
+object func_classes$u002Eworksheet_sc {
+  private var args$opt0 = Option.empty[Array[String]]
+  def args$set(args: Array[String]): Unit = {
+    args$opt0 = Some(args)
+  }
+  def args$opt: Option[Array[String]] = args$opt0
+  def args$: Array[String] = args$opt.getOrElse {
+    sys.error("No arguments passed to this script")
+  }
+
+  lazy val script = new func_classes$u002Eworksheet$_
+
+  def main(args: Array[String]): Unit = {
+    args$set(args)
+    script.hashCode() // hashCode to clear scalac warning about pure expression in statement position
+  }
+}
+
+export func_classes$u002Eworksheet_sc.script as func_classes$u002Eworksheet
+
